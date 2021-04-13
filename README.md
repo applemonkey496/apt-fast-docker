@@ -1,6 +1,6 @@
 # apt-fast-docker
 
-> View the package at the [apt-fast repo](https://github.com/ilikenwf/apt-fast).
+> View the original package at the [apt-fast repo](https://github.com/ilikenwf/apt-fast).
 > 
 > View the [images on Docker Hub](https://hub.docker.com/repository/docker/applemonkey496/apt-fast).
 
