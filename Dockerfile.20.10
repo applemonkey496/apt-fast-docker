@@ -1,0 +1,19 @@
+
+FROM ubuntu:groovy
+
+ENV DEBIAN_FRONTEND="noninteractive"
+
+# Install apt-fast
+RUN apt-get update && apt-get install -y gnupg && \
+    printf '\n%s\n%s\n' \
+    'deb http://ppa.launchpad.net/apt-fast/stable/ubuntu groovy main' \
+    'deb-src http://ppa.launchpad.net/apt-fast/stable/ubuntu groovy main' \
+    >> /etc/apt/sources.list && \
+    \
+    apt-key adv --keyserver keyserver.ubuntu.com \
+    --recv-keys A2166B8DE8BDC3367D1901C11EE2FF37CA8DA16B && \
+    \
+    apt-get update && apt-get install -y apt-fast
+
+# Unset DEBIAN_FRONTEND
+ENV DEBIAN_FRONTEND=
